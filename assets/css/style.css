@@ -1,0 +1,95 @@
+/* Custom Styles for GPRFO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Navigation styles */
+.navbar-scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter animation */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+    outline: 2px solid #FF6B35;
+    outline-offset: 2px;
+}
+
+/* Skip to main content for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #FF6B35;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Print styles */
+@media print {
+    nav, footer, .no-print {
+        display: none !important;
+    }
+    
+    body {
+        color: black;
+        background: white;
+    }
+}

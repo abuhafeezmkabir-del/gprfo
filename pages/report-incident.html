@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Report a religious persecution incident to GPRFO. Your information helps protect vulnerable communities worldwide.">
+    <title>Report an Incident - GPRFO</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A2540',
+                        accent: '#FF6B35',
+                        'accent-dark': '#E55A2B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body bg-neutral-100">
+    
+    <!-- Navigation (same as index) -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../logo.jpeg" alt="GPRFO - Global Peace & Religious Freedom Observatory" class="h-12 w-auto">
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="about.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">About</a>
+                    <a href="vision.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Vision</a>
+                    <a href="mission.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Mission</a>
+                    <a href="solutions.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Solutions</a>
+                    <a href="methodology.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Methodology</a>
+                    <a href="contact.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Contact</a>
+                </div>
+                
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-neutral-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Report Form Section -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Security Warning -->
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-8" data-aos="fade-up">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-shield-alt text-red-500 text-xl"></i>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-sm font-medium text-red-800">Security Warning</h3>
+                        <p class="text-sm text-red-700 mt-1">
+                            If your safety is at immediate risk, contact local emergency services first. 
+                            This form is for non-emergency incident reporting. Do not include personally identifiable 
+                            information unless necessary. All submissions are encrypted and confidential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <h1 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-2">Report an Incident</h1>
+                <p class="text-lg text-neutral-700 mb-8">
+                    Your report helps us track and respond to religious persecution. 
+                    All information is verified before publication.
+                </p>
+
+                <form id="incident-report-form" action="../backend/api/submit-report.php" method="POST" enctype="multipart/form-data" class="bg-white rounded-lg shadow-lg p-8">
+                    
+                    <!-- Location Section -->
+                    <fieldset class="mb-8">
+                        <legend class="text-xl font-semibold text-primary mb-4 pb-2 border-b">
+                            <i class="fas fa-map-marker-alt text-accent mr-2"></i>Location Details
+                        </legend>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="country" class="block text-sm font-medium text-neutral-700 mb-2">Country <span class="text-red-500">*</span></label>
+                                <select id="country" name="country" required class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                                    <option value="">Select Country</option>
+                                    <option value="NG">Nigeria</option>
+                                    <option value="IN">India</option>
+                                    <option value="PK">Pakistan</option>
+                                    <option value="ET">Ethiopia</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="state" class="block text-sm font-medium text-neutral-700 mb-2">State/Province</label>
+                                <input type="text" id="state" name="state" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent" placeholder="e.g., Kaduna">
+                            </div>
+                            
+                            <div>
+                                <label for="lga" class="block text-sm font-medium text-neutral-700 mb-2">Local Government Area (LGA)</label>
+                                <input type="text" id="lga" name="lga" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent" placeholder="Enter LGA if known">
+                            </div>
+                            
+                            <div>
+                                <label for="village" class="block text-sm font-medium text-neutral-700 mb-2">Village/Town <span class="text-red-500">*</span></label>
+                                <input type="text" id="village" name="village" required class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent" placeholder="Specific location">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Incident Details -->
+                    <fieldset class="mb-8">
+                        <legend class="text-xl font-semibold text-primary mb-4 pb-2 border-b">
+                            <i class="fas fa-exclamation-triangle text-accent mr-2"></i>Incident Details
+                        </legend>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="incident_date" class="block text-sm font-medium text-neutral-700 mb-2">Date of Incident <span class="text-red-500">*</span></label>
+                                <input type="date" id="incident_date" name="incident_date" required class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="incident_time" class="block text-sm font-medium text-neutral-700 mb-2">Time (Approximate)</label>
+                                <input type="time" id="incident_time" name="incident_time" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="incident_type" class="block text-sm font-medium text-neutral-700 mb-2">Incident Type <span class="text-red-500">*</span></label>
+                                <select id="incident_type" name="incident_type" required class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                                    <option value="">Select Type</option>
+                                    <option value="killing">Killing/Murder</option>
+                                    <option value="abduction">Abduction</option>
+                                    <option value="attack">Physical Attack</option>
+                                    <option value="church_burning">Church/Place of Worship Burning</option>
+                                    <option value="property_destruction">Property Destruction</option>
+                                    <option value="forced_displacement">Forced Displacement</option>
+                                    <option value="forced_conversion">Forced Conversion</option>
+                                    <option value="harassment">Harassment/Threats</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="perpetrator" class="block text-sm font-medium text-neutral-700 mb-2">Suspected Perpetrator(s)</label>
+                                <input type="text" id="perpetrator" name="perpetrator" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent" placeholder="e.g., Non-state actors, known group">
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label for="description" class="block text-sm font-medium text-neutral-700 mb-2">Incident Description <span class="text-red-500">*</span></label>
+                            <textarea id="description" name="description" rows="5" required class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent" placeholder="Provide detailed account of what happened..."></textarea>
+                            <p class="text-sm text-neutral-500 mt-1">Do not include names or personal identifiers unless absolutely necessary.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- Casualties Section -->
+                    <fieldset class="mb-8">
+                        <legend class="text-xl font-semibold text-primary mb-4 pb-2 border-b">
+                            <i class="fas fa-heart-broken text-accent mr-2"></i>Casualties Information
+                        </legend>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <label for="killed" class="block text-sm font-medium text-neutral-700 mb-2">Number Killed</label>
+                                <input type="number" id="killed" name="killed" min="0" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="injured" class="block text-sm font-medium text-neutral-700 mb-2">Number Injured</label>
+                                <input type="number" id="injured" name="injured" min="0" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="displaced" class="block text-sm font-medium text-neutral-700 mb-2">Number Displaced</label>
+                                <input type="number" id="displaced" name="displaced" min="0" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- File Upload -->
+                    <fieldset class="mb-8">
+                        <legend class="text-xl font-semibold text-primary mb-4 pb-2 border-b">
+                            <i class="fas fa-file-upload text-accent mr-2"></i>Evidence Upload
+                        </legend>
+                        
+                        <div class="border-2 border-dashed border-neutral-300 rounded-lg p-8 text-center" id="file-drop-zone">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-neutral-400 mb-4"></i>
+                            <p class="text-neutral-700 mb-2">Drag and drop files here, or click to browse</p>
+                            <p class="text-sm text-neutral-500 mb-4">Maximum file size: 50MB. Accepted formats: JPG, PNG, MP4, MOV</p>
+                            <input type="file" id="evidence_files" name="evidence_files[]" multiple accept=".jpg,.jpeg,.png,.mp4,.mov" class="hidden">
+                            <button type="button" id="browse-files" class="px-6 py-2 bg-neutral-100 text-neutral-700 rounded-md hover:bg-neutral-200 transition">
+                                Browse Files
+                            </button>
+                            <div id="file-list" class="mt-4 space-y-2"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Contact Information (Optional) -->
+                    <fieldset class="mb-8">
+                        <legend class="text-xl font-semibold text-primary mb-4 pb-2 border-b">
+                            <i class="fas fa-envelope text-accent mr-2"></i>Your Contact (Optional)
+                        </legend>
+                        
+                        <p class="text-sm text-neutral-600 mb-4">
+                            Optional. Provide if you're willing to be contacted for verification. Your information will be kept confidential.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="reporter_email" class="block text-sm font-medium text-neutral-700 mb-2">Email</label>
+                                <input type="email" id="reporter_email" name="reporter_email" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="reporter_phone" class="block text-sm font-medium text-neutral-700 mb-2">Phone (WhatsApp preferred)</label>
+                                <input type="tel" id="reporter_phone" name="reporter_phone" class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-accent focus:border-accent">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Terms and Submit -->
+                    <div class="mb-6">
+                        <label class="flex items-start">
+                            <input type="checkbox" name="terms" required class="mt-1 mr-3">
+                            <span class="text-sm text-neutral-700">
+                                I confirm that the information provided is accurate to the best of my knowledge. 
+                                I understand that GPRFO will verify this report before publication. 
+                                I have read the <a href="#" class="text-accent hover:text-accent-dark">Privacy Policy</a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-info-circle text-yellow-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-yellow-800">
+                                    For urgent reports or if you prefer WhatsApp, contact us at 
+                                    <strong>+234 XXX XXX XXXX</strong> (WhatsApp only). 
+                                    We respond within 24 hours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition shadow-lg text-lg">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Submit Report
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2024 Global Peace & Religious Freedom Observatory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/report-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GPRFO Vision - A world where no one is killed for their faith, and no village is burned without warning.">
+    <title>Our Vision - GPRFO</title>
+    <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A2540',
+                        accent: '#FF6B35',
+                        'accent-dark': '#E55A2B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body bg-white">
+    
+    <!-- Navigation (Same as About page) -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../logo.jpeg" alt="GPRFO - Global Peace & Religious Freedom Observatory" class="h-12 w-auto">
+                    </a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="about.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">About</a>
+                    <a href="vision.html" class="text-sm font-medium text-accent transition">Vision</a>
+                    <a href="mission.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Mission</a>
+                    <a href="solutions.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Solutions</a>
+                    <a href="methodology.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Methodology</a>
+                    <a href="partners.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Partners</a>
+                    <a href="gospel-access-index.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Gospel Index</a>
+                    <a href="contact.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Contact</a>
+                    <a href="report-incident.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-dark transition shadow-sm">
+                        Report Incident
+                    </a>
+                </div>
+                
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-neutral-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="about.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">About</a>
+                <a href="vision.html" class="block text-sm font-medium text-accent py-2">Vision</a>
+                <a href="mission.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Mission</a>
+                <a href="solutions.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Solutions</a>
+                <a href="methodology.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Methodology</a>
+                <a href="partners.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Partners</a>
+                <a href="gospel-access-index.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Gospel Index</a>
+                <a href="contact.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Contact</a>
+                <a href="report-incident.html" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent">
+                    Report Incident
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-r from-primary to-primary/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Vision</h1>
+                <p class="text-xl text-neutral-200">The world we are building.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Statement -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <div class="w-24 h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-8">
+                    <i class="fas fa-globe-africa text-4xl text-white"></i>
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-8 leading-tight">
+                    A world where no one is killed for their faith, and no village is burned without warning.
+                </h2>
+                
+                <div class="prose prose-lg max-w-3xl mx-auto text-neutral-700">
+                    <p class="text-xl leading-relaxed">
+                        We envision a world where every government, NGO, and pastor can check the "GPRFO Risk Score" for a village before sending people there — the same way we check weather before flying.
+                    </p>
+                    
+                    <p class="text-xl leading-relaxed mt-8">
+                        In this world, insurgency is not just illegal. It's predictable and preventable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Storytelling -->
+    <section class="py-20 bg-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-6">The World Today</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-skull text-red-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-primary">5,000+ Killed Yearly</h4>
+                                <p class="text-neutral-600">Men, women, and children killed for their faith every year</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-home text-red-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-primary">Villages Burned Without Warning</h4>
+                                <p class="text-neutral-600">Communities attacked with zero early warning systems in place</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-clock text-red-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-primary">72-Hour Response Delay</h4>
+                                <p class="text-neutral-600">International community learns of attacks days after they occur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-6">The GPRFO World</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-green-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-primary">30-Day Early Warning</h4>
+                                <p class="text-neutral-600">Governments and NGOs alerted before attacks escalate</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-satellite text-green-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-primary">LGA-Level Risk Scoring</h4>
+                                <p class="text-neutral-600">Check any village's risk score before sending people in</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-bolt text-green-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-primary">60-Minute Alert Protocol</h4>
+                                <p class="text-neutral-600">From verified incident to global alert in under one hour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The How -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-8">How We Get There</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6">
+                    <i class="fas fa-database text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Build the Index</h3>
+                    <p class="text-neutral-300">The definitive global database of religious persecution and conflict risk</p>
+                </div>
+                
+                <div class="p-6">
+                    <i class="fas fa-network-wired text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Deploy the Network</h3>
+                    <p class="text-neutral-300">200+ local agents providing ground truth in the world's hardest places</p>
+                </div>
+                
+                <div class="p-6">
+                    <i class="fas fa-hand-holding-heart text-4xl text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Save Lives</h3>
+                    <p class="text-neutral-300">Every alert, every index score, every protocol designed to protect people</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Help Us Build This World</h2>
+            <p class="text-xl text-neutral-700 mb-8">This vision requires partners, data contributors, and supporters.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="partners.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition">
+                    Become a Partner
+                </a>
+                <a href="report-incident.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white transition">
+                    Report an Incident
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as About page) -->
+    <footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white font-heading text-xl font-bold mb-4">GPRFO</h3>
+                    <p class="text-sm text-neutral-400">Global Peace & Religious Freedom Observatory</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="methodology.html" class="hover:text-white transition">Methodology</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="gospel-access-index.html" class="hover:text-white transition">Nigeria Index</a></li>
+                        <li><a href="report-incident.html" class="hover:text-white transition">Report Incident</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 Global Peace & Religious Freedom Observatory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

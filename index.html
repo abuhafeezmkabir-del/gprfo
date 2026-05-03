@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GPRFO - Global Peace & Religious Freedom Observatory. Preventing conflict by measuring it. Real-time tracking of religious persecution and insurgency worldwide.">
+    <meta name="keywords" content="religious freedom, peace observatory, conflict tracking, human rights, Nigeria index">
+    <link rel="shortcut icon" href="./logo.jpeg" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="GPRFO - Preventing Conflict by Measuring It">
+    <meta property="og:description" content="Global, neutral observatory tracking religious persecution and insurgency in real time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gprfo.org">
+    
+    <title>GPRFO - Global Peace & Religious Freedom Observatory</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A2540',
+                        accent: '#FF6B35',
+                        'accent-dark': '#E55A2B',
+                        neutral: {
+                            100: '#F5F5F5',
+                            200: '#E5E5E5',
+                            700: '#4A4A4A',
+                            900: '#1A1A1A',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Inter', 'system-ui', 'sans-serif'],
+                        body: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body bg-white text-neutral-900">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="./logo.jpeg" alt="GPRFO Logo" class="h-12 w-auto">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="pages/about.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">About</a>
+                    <a href="pages/vision.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Vision</a>
+                    <a href="pages/mission.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Mission</a>
+                    <a href="pages/solutions.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Solutions</a>
+                    <a href="pages/methodology.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Methodology</a>
+                    <a href="pages/partners.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Partners</a>
+                    <a href="pages/gospel-access-index.html" class="text-sm font-medium text-neutral-700 hover:text-primary transition">Gospel Index</a>
+                    <a href="pages/report-incident.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-dark transition shadow-sm">
+                        Report Incident
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-neutral-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="pages/about.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">About</a>
+                <a href="pages/vision.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Vision</a>
+                <a href="pages/mission.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Mission</a>
+                <a href="pages/solutions.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Solutions</a>
+                <a href="pages/methodology.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Methodology</a>
+                <a href="pages/partners.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Partners</a>
+                <a href="pages/gospel-access-index.html" class="block text-sm font-medium text-neutral-700 hover:text-primary py-2">Gospel Index</a>
+                <a href="pages/report-incident.html" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-dark transition">
+                    Report Incident
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center bg-primary overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
+                    Preventing Conflict by <span class="text-accent">Measuring It</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-200 mb-8 leading-relaxed">
+                    GPRFO is the global, neutral observatory tracking religious persecution and insurgency in real time to protect lives and freedoms.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="pages/gospel-access-index.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary transition">
+                        View Nigeria Index
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="pages/report-incident.html" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-accent-dark transition shadow-lg">
+                        Report an Incident
+                        <i class="fas fa-exclamation-circle ml-2"></i>
+                    </a>
+                    <a href="pages/partners.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-base font-medium rounded-md text-white hover:border-white transition">
+                        Partner With Us
+                        <i class="fas fa-handshake ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="bg-neutral-100 border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <p class="text-center text-sm md:text-base text-neutral-700 font-medium">
+                <i class="fas fa-shield-alt text-accent mr-2"></i>
+                Used by governments, NGOs, and faith communities worldwide for critical decision-making
+            </p>
+        </div>
+    </section>
+
+    <!-- Crisis Statistics -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Global Crisis at a Glance</h2>
+                <p class="text-lg text-neutral-700 max-w-2xl mx-auto">The scale of religious persecution demands immediate attention and action.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl font-bold text-accent mb-4 counter" data-target="14">$0T</div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Global Cost</h3>
+                    <p class="text-neutral-700">Annual economic impact of religious violence worldwide</p>
+                </div>
+                
+                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl font-bold text-accent mb-4 counter" data-target="3">0B</div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">People Affected</h3>
+                    <p class="text-neutral-700">Individuals facing religious persecution globally</p>
+                </div>
+                
+                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-5xl font-bold text-accent mb-4">72<span class="text-2xl">hrs</span></div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Response Delay</h3>
+                    <p class="text-neutral-700">Average time before international community responds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">How GPRFO Works</h2>
+                <p class="text-lg text-neutral-200 max-w-2xl mx-auto">A systematic approach to identifying, verifying, and responding to religious persecution.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-search text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Collect</h3>
+                    <p class="text-neutral-200">Gather incident reports from local partners, media monitoring, and direct submissions from affected communities.</p>
+                </div>
+                
+                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-check-circle text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Verify</h3>
+                    <p class="text-neutral-200">Apply rigorous 2-source rule and 3-layer verification to ensure accuracy before publication.</p>
+                </div>
+                
+                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-share-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Distribute</h3>
+                    <p class="text-neutral-200">Alert governments, NGOs, and communities in real-time to enable rapid response and protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Sections -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Who We Serve</h2>
+                <p class="text-lg text-neutral-700 max-w-2xl mx-auto">Our data and insights empower decision-makers across sectors.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-landmark text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Governments</h3>
+                    <p class="text-neutral-700 mb-6">Evidence-based policy making, early warning systems, and targeted interventions to protect vulnerable populations.</p>
+                    <a href="pages/partners.html" class="text-accent font-medium hover:text-accent-dark">Learn More →</a>
+                </div>
+                
+                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-hands-helping text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">NGOs</h3>
+                    <p class="text-neutral-700 mb-6">Coordinate relief efforts, allocate resources efficiently, and measure impact with reliable, timely data.</p>
+                    <a href="pages/partners.html" class="text-accent font-medium hover:text-accent-dark">Learn More →</a>
+                </div>
+                
+                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-accent mb-4">
+                        <i class="fas fa-building text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Companies</h3>
+                    <p class="text-neutral-700 mb-6">Risk assessment for operations, supply chain security, and corporate social responsibility initiatives.</p>
+                    <a href="pages/partners.html" class="text-accent font-medium hover:text-accent-dark">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Report -->
+    <section class="py-20 bg-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block px-4 py-1 bg-accent text-white text-sm font-semibold rounded-full mb-4">LATEST REPORT</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Nigeria Religious Freedom Index</h2>
+                <p class="text-lg text-neutral-700 max-w-2xl mx-auto">Comprehensive analysis of religious persecution patterns across Nigerian states.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Key Findings</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-chart-bar text-accent mr-3 mt-1"></i>
+                                <span class="text-neutral-700">12 states classified as "severe persecution" zones</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chart-bar text-accent mr-3 mt-1"></i>
+                                <span class="text-neutral-700">4,200+ verified incidents in the past 12 months</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chart-bar text-accent mr-3 mt-1"></i>
+                                <span class="text-neutral-700">72% of incidents involved non-state actors</span>
+                            </li>
+                        </ul>
+                        <a href="pages/gospel-access-index.html" class="inline-flex items-center mt-6 px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition">
+                            View Full Report
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="bg-neutral-100 rounded-lg p-8 flex items-center justify-center">
+                        <p class="text-lg text-neutral-700 text-center">Interactive map and data visualization coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Trusted Partners</h2>
+                <p class="text-lg text-neutral-700 max-w-2xl mx-auto">Collaborating with organizations committed to protecting religious freedom worldwide.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center" data-aos="fade-up">
+                <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
+                <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
+                <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
+                <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <i class="fas fa-quote-left text-4xl text-accent mb-6"></i>
+            <blockquote class="text-2xl md:text-3xl font-heading mb-8 leading-relaxed">
+                "GPRFO's data has transformed how we respond to religious persecution. Their early warning system has helped us protect thousands of vulnerable communities."
+            </blockquote>
+            <cite class="text-lg text-neutral-200 not-italic">
+                — International NGO Director
+            </cite>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gradient-to-r from-accent to-accent-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
+                Persecution thrives in darkness.
+                <br>
+                <span class="text-primary">Data is light.</span>
+            </h2>
+            <p class="text-xl text-white/90 mb-8">Join us in building the world's most comprehensive platform for tracking and preventing religious persecution.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pages/report-incident.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-accent font-medium rounded-md hover:bg-neutral-100 transition">
+                    Report an Incident
+                </a>
+                <a href="pages/partners.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-medium rounded-md hover:bg-white/10 transition">
+                    Become a Partner
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white font-heading text-xl font-bold mb-4">GPRFO</h3>
+                    <p class="text-sm text-neutral-400">Global Peace & Religious Freedom Observatory</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="pages/about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="pages/methodology.html" class="hover:text-white transition">Methodology</a></li>
+                        <li><a href="pages/solutions.html" class="hover:text-white transition">Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="pages/gospel-access-index.html" class="hover:text-white transition">Nigeria Index</a></li>
+                        <li><a href="pages/report-incident.html" class="hover:text-white transition">Report Incident</a></li>
+                        <li><a href="pages/contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 Global Peace & Religious Freedom Observatory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
