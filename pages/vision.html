@@ -6,6 +6,7 @@
     <meta name="description" content="GPRFO Vision - A world where no one is killed for their faith, and no village is burned without warning.">
     <title>Our Vision - GPRFO</title>
     <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,7 +28,7 @@
 </head>
 <body class="font-body bg-white">
     
-    <!-- Navigation (Same as About page) -->
+    <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -77,7 +78,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="pt-32 pb-16 bg-gradient-to-r from-primary to-primary/90">
+    <section class="pt-32 pb-16 bg-gradient-to-r from-primary to-primary/90 lazy-load-blur">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div data-aos="fade-up">
                 <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Vision</h1>
@@ -89,21 +90,21 @@
     <!-- Vision Statement -->
     <section class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <div class="w-24 h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-8">
+            <div class="text-center lazy-load">
+                <div class="w-24 h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-8 lazy-load-scale">
                     <i class="fas fa-globe-africa text-4xl text-white"></i>
                 </div>
                 
-                <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-8 leading-tight">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-8 leading-tight lazy-load delay-200">
                     A world where no one is killed for their faith, and no village is burned without warning.
                 </h2>
                 
                 <div class="prose prose-lg max-w-3xl mx-auto text-neutral-700">
-                    <p class="text-xl leading-relaxed">
+                    <p class="text-xl leading-relaxed lazy-load delay-300">
                         We envision a world where every government, NGO, and pastor can check the "GPRFO Risk Score" for a village before sending people there — the same way we check weather before flying.
                     </p>
                     
-                    <p class="text-xl leading-relaxed mt-8">
+                    <p class="text-xl leading-relaxed mt-8 lazy-load delay-400">
                         In this world, insurgency is not just illegal. It's predictable and preventable.
                     </p>
                 </div>
@@ -115,10 +116,10 @@
     <section class="py-20 bg-neutral-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
+                <div class="lazy-load-left">
                     <h3 class="text-2xl font-heading font-bold text-primary mb-6">The World Today</h3>
                     <div class="space-y-6">
-                        <div class="flex items-start">
+                        <div class="flex items-start lazy-load delay-100">
                             <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-skull text-red-600"></i>
                             </div>
@@ -128,7 +129,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
+                        <div class="flex items-start lazy-load delay-200">
                             <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-home text-red-600"></i>
                             </div>
@@ -138,7 +139,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
+                        <div class="flex items-start lazy-load delay-300">
                             <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-clock text-red-600"></i>
                             </div>
@@ -150,10 +151,10 @@
                     </div>
                 </div>
                 
-                <div data-aos="fade-left">
+                <div class="lazy-load-right">
                     <h3 class="text-2xl font-heading font-bold text-primary mb-6">The GPRFO World</h3>
                     <div class="space-y-6">
-                        <div class="flex items-start">
+                        <div class="flex items-start lazy-load delay-100">
                             <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-shield-alt text-green-600"></i>
                             </div>
@@ -163,7 +164,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
+                        <div class="flex items-start lazy-load delay-200">
                             <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-satellite text-green-600"></i>
                             </div>
@@ -173,7 +174,7 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
+                        <div class="flex items-start lazy-load delay-300">
                             <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-bolt text-green-600"></i>
                             </div>
@@ -190,23 +191,23 @@
 
     <!-- The How -->
     <section class="py-20 bg-primary text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-8">How We Get There</h2>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-8 lazy-load">How We Get There</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6">
+                <div class="p-6 lazy-load-scale delay-100">
                     <i class="fas fa-database text-4xl text-accent mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Build the Index</h3>
                     <p class="text-neutral-300">The definitive global database of religious persecution and conflict risk</p>
                 </div>
                 
-                <div class="p-6">
+                <div class="p-6 lazy-load-scale delay-300">
                     <i class="fas fa-network-wired text-4xl text-accent mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Deploy the Network</h3>
                     <p class="text-neutral-300">200+ local agents providing ground truth in the world's hardest places</p>
                 </div>
                 
-                <div class="p-6">
+                <div class="p-6 lazy-load-scale delay-500">
                     <i class="fas fa-hand-holding-heart text-4xl text-accent mb-4"></i>
                     <h3 class="text-xl font-semibold mb-2">Save Lives</h3>
                     <p class="text-neutral-300">Every alert, every index score, every protocol designed to protect people</p>
@@ -217,21 +218,21 @@
 
     <!-- CTA -->
     <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center lazy-load-blur">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Help Us Build This World</h2>
             <p class="text-xl text-neutral-700 mb-8">This vision requires partners, data contributors, and supporters.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="partners.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition">
+                <a href="partners.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition lazy-load-scale delay-100">
                     Become a Partner
                 </a>
-                <a href="report-incident.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white transition">
+                <a href="report-incident.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white transition lazy-load-scale delay-200">
                     Report an Incident
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Same as About page) -->
+    <!-- Footer -->
     <footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
@@ -274,6 +275,7 @@
         </div>
     </footer>
 
+    <script src="../assets/js/lazy-load.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>

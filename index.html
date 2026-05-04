@@ -51,6 +51,21 @@
 </head>
 <body class="font-body bg-white text-neutral-900">
     
+    <!-- Loading Screen -->
+    <div id="page-loader" class="fixed inset-0 bg-primary z-[100] flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center">
+            <div class="relative w-24 h-24 mx-auto mb-6">
+                <div class="absolute inset-0 border-4 border-transparent border-t-accent rounded-full animate-spin"></div>
+                <div class="absolute inset-2 border-4 border-transparent border-t-white/50 rounded-full animate-spin-slow"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fas fa-globe-africa text-2xl text-accent"></i>
+                </div>
+            </div>
+            <h2 class="text-white text-xl font-heading font-bold mb-2">GPRFO</h2>
+            <p class="text-neutral-300 text-sm">Loading global data...</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,7 +116,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center bg-primary overflow-hidden">
+    <section class="relative min-h-screen flex items-center bg-primary overflow-hidden lazy-load-blur">
         <!-- Background Image - VICTIMS ON ROCK -->
         <div class="absolute inset-0">
             <img src="assets/images/victims-on-rock.jpg" 
@@ -112,7 +127,7 @@
         </div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1000">
+            <div class="max-w-3xl lazy-load" data-aos="fade-up" data-aos-duration="1000">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
                     Preventing Conflict by <span class="text-accent">Measuring It</span>
                 </h1>
@@ -120,15 +135,15 @@
                     GPRFO is the global, neutral observatory tracking religious persecution and insurgency in real time to protect lives and freedoms.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="pages/gospel-access-index.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary transition">
+                    <a href="pages/gospel-access-index.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-primary transition lazy-load-scale delay-100">
                         View Nigeria Index
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
-                    <a href="pages/report-incident.html" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-accent-dark transition shadow-lg">
+                    <a href="pages/report-incident.html" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-accent-dark transition shadow-lg lazy-load-scale delay-200">
                         Report an Incident
                         <i class="fas fa-exclamation-circle ml-2"></i>
                     </a>
-                    <a href="pages/partners.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-base font-medium rounded-md text-white hover:border-white transition">
+                    <a href="pages/partners.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-base font-medium rounded-md text-white hover:border-white transition lazy-load-scale delay-300">
                         Partner With Us
                         <i class="fas fa-handshake ml-2"></i>
                     </a>
@@ -138,7 +153,7 @@
     </section>
 
     <!-- Trust Bar -->
-    <section class="bg-neutral-100 border-b border-neutral-200">
+    <section class="bg-neutral-100 border-b border-neutral-200 lazy-load">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <p class="text-center text-sm md:text-base text-neutral-700 font-medium">
                 <i class="fas fa-shield-alt text-accent mr-2"></i>
@@ -150,25 +165,25 @@
     <!-- Crisis Statistics -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-16 lazy-load">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Global Crisis at a Glance</h2>
                 <p class="text-lg text-neutral-700 max-w-2xl mx-auto">The scale of religious persecution demands immediate attention and action.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition lazy-load-scale delay-100" data-aos="fade-up">
                     <div class="text-5xl font-bold text-accent mb-4 counter" data-target="14">$0T</div>
                     <h3 class="text-xl font-semibold text-primary mb-2">Global Cost</h3>
                     <p class="text-neutral-700">Annual economic impact of religious violence worldwide</p>
                 </div>
                 
-                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition lazy-load-scale delay-200" data-aos="fade-up">
                     <div class="text-5xl font-bold text-accent mb-4 counter" data-target="3">0B</div>
                     <h3 class="text-xl font-semibold text-primary mb-2">People Affected</h3>
                     <p class="text-neutral-700">Individuals facing religious persecution globally</p>
                 </div>
                 
-                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center p-8 bg-neutral-100 rounded-lg hover:shadow-lg transition lazy-load-scale delay-300" data-aos="fade-up">
                     <div class="text-5xl font-bold text-accent mb-4">72<span class="text-2xl">hrs</span></div>
                     <h3 class="text-xl font-semibold text-primary mb-2">Response Delay</h3>
                     <p class="text-neutral-700">Average time before international community responds</p>
@@ -180,13 +195,13 @@
     <!-- Solution Section -->
     <section class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-16 lazy-load">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">How GPRFO Works</h2>
                 <p class="text-lg text-neutral-200 max-w-2xl mx-auto">A systematic approach to identifying, verifying, and responding to religious persecution.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center p-8 lazy-load-left delay-100" data-aos="fade-up">
                     <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-search text-3xl text-white"></i>
                     </div>
@@ -194,7 +209,7 @@
                     <p class="text-neutral-200">Gather incident reports from local partners, media monitoring, and direct submissions from affected communities.</p>
                 </div>
                 
-                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center p-8 lazy-load-scale delay-300" data-aos="fade-up">
                     <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-check-circle text-3xl text-white"></i>
                     </div>
@@ -202,7 +217,7 @@
                     <p class="text-neutral-200">Apply rigorous 2-source rule and 3-layer verification to ensure accuracy before publication.</p>
                 </div>
                 
-                <div class="text-center p-8" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center p-8 lazy-load-right delay-500" data-aos="fade-up">
                     <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-share-alt text-3xl text-white"></i>
                     </div>
@@ -216,13 +231,13 @@
     <!-- Audience Sections -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-16 lazy-load">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Who We Serve</h2>
                 <p class="text-lg text-neutral-700 max-w-2xl mx-auto">Our data and insights empower decision-makers across sectors.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition lazy-load-flip delay-100" data-aos="fade-up">
                     <div class="text-accent mb-4">
                         <i class="fas fa-landmark text-4xl"></i>
                     </div>
@@ -231,7 +246,7 @@
                     <a href="pages/partners.html" class="text-accent font-medium hover:text-accent-dark">Learn More →</a>
                 </div>
                 
-                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition lazy-load-flip delay-200" data-aos="fade-up">
                     <div class="text-accent mb-4">
                         <i class="fas fa-hands-helping text-4xl"></i>
                     </div>
@@ -240,7 +255,7 @@
                     <a href="pages/partners.html" class="text-accent font-medium hover:text-accent-dark">Learn More →</a>
                 </div>
                 
-                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="border border-neutral-200 rounded-lg p-8 hover:shadow-xl transition lazy-load-flip delay-300" data-aos="fade-up">
                     <div class="text-accent mb-4">
                         <i class="fas fa-building text-4xl"></i>
                     </div>
@@ -255,15 +270,20 @@
     <!-- Latest Report -->
     <section class="py-20 bg-neutral-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- In the Latest Report Section, find the placeholder and replace with: -->
-            <div class="bg-neutral-100 rounded-lg p-4 md:p-0 overflow-hidden">
+            <div class="text-center mb-16 lazy-load">
+                <span class="inline-block px-4 py-1 bg-accent text-white text-sm font-semibold rounded-full mb-4">LATEST REPORT</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Nigeria Religious Freedom Index</h2>
+                <p class="text-lg text-neutral-700 max-w-2xl mx-auto">Comprehensive analysis of religious persecution patterns across Nigerian states.</p>
+            </div>
+            
+            <div class="bg-neutral-100 rounded-lg p-4 md:p-0 overflow-hidden lazy-load-scale">
                 <img src="assets/images/victims-on-rock.jpg" 
                     alt="Nigeria conflict victims awaiting aid" 
                     class="w-full h-64 md:h-full object-cover rounded-lg shadow-lg"
                     loading="lazy">
             </div>
             
-            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12" data-aos="fade-up">
+            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 lazy-load-flip mt-8" data-aos="fade-up">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 class="text-2xl font-semibold text-primary mb-4">Key Findings</h3>
@@ -297,12 +317,12 @@
     <!-- Partners -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-16 lazy-load">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Trusted Partners</h2>
                 <p class="text-lg text-neutral-700 max-w-2xl mx-auto">Collaborating with organizations committed to protecting religious freedom worldwide.</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center" data-aos="fade-up">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center lazy-load-scale" data-aos="fade-up">
                 <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
                 <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
                 <div class="h-20 bg-neutral-100 rounded flex items-center justify-center text-neutral-400 font-semibold">Partner Logo</div>
@@ -313,7 +333,7 @@
 
     <!-- Testimonial -->
     <section class="py-20 bg-primary text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center lazy-load-blur">
             <i class="fas fa-quote-left text-4xl text-accent mb-6"></i>
             <blockquote class="text-2xl md:text-3xl font-heading mb-8 leading-relaxed">
                 "GPRFO's data has transformed how we respond to religious persecution. Their early warning system has helped us protect thousands of vulnerable communities."
@@ -326,7 +346,7 @@
 
     <!-- Final CTA -->
     <section class="py-20 bg-gradient-to-r from-accent to-accent-dark">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center lazy-load-scale">
             <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
                 Persecution thrives in darkness.
                 <br>
@@ -382,14 +402,29 @@
             </div>
             
             <div class="border-t border-neutral-800 pt-8 text-center text-sm">
-                <p>&copy; 2024 Global Peace & Religious Freedom Observatory. All rights reserved.</p>
+                <p>&copy; 2024 Global Peace & Religious Freedom Observatory. All rights reserved. Powered by <a href="https://www.qafamstech.com.ng" class="hover:text-white transition">Qafam Software Technology</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/lazy-load.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script>
+        // Hide loading screen when page loads
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 500);
+                }, 800);
+            }
+        });
+    </script>
 </body>
 </html>

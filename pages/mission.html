@@ -6,6 +6,7 @@
     <meta name="description" content="GPRFO Mission - To make insurgency and persecution unprofitable by measuring, predicting, standardizing, and protecting.">
     <title>Our Mission - GPRFO</title>
     <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,7 +28,7 @@
 </head>
 <body class="font-body bg-white">
     
-    <!-- Navigation (Same structure as other pages) -->
+    <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -77,7 +78,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="pt-32 pb-16 bg-accent">
+    <section class="pt-32 pb-16 bg-accent lazy-load-blur">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div data-aos="fade-up">
                 <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Mission</h1>
@@ -89,7 +90,7 @@
     <!-- Mission Statement -->
     <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
+            <div class="text-center lazy-load">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
                     To make insurgency and persecution unprofitable by:
                 </h2>
@@ -103,7 +104,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <!-- Pillar 1: Measuring -->
-                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition lazy-load-scale delay-100" data-aos="fade-up">
                     <div class="flex items-center mb-4">
                         <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
                             <span class="text-3xl font-bold text-accent">1</span>
@@ -130,7 +131,7 @@
                 </div>
                 
                 <!-- Pillar 2: Predicting -->
-                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition lazy-load-scale delay-200" data-aos="fade-up">
                     <div class="flex items-center mb-4">
                         <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
                             <span class="text-3xl font-bold text-white">2</span>
@@ -157,7 +158,7 @@
                 </div>
                 
                 <!-- Pillar 3: Standardizing -->
-                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition lazy-load-scale delay-300" data-aos="fade-up">
                     <div class="flex items-center mb-4">
                         <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
                             <span class="text-3xl font-bold text-accent">3</span>
@@ -184,7 +185,7 @@
                 </div>
                 
                 <!-- Pillar 4: Protecting -->
-                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition lazy-load-scale delay-400" data-aos="fade-up">
                     <div class="flex items-center mb-4">
                         <div class="w-16 h-16 bg-accent-dark rounded-full flex items-center justify-center">
                             <span class="text-3xl font-bold text-white">4</span>
@@ -216,32 +217,32 @@
 
     <!-- Impact Section -->
     <section class="py-20 bg-primary text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center lazy-load">
             <h2 class="text-3xl md:text-4xl font-heading font-bold mb-8">Our Mission in Action</h2>
             
             <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div>
+                <div class="lazy-load-scale delay-100">
                     <div class="text-4xl font-bold text-accent mb-2">200+</div>
                     <p class="text-neutral-200">Local agents across high-risk zones</p>
                 </div>
-                <div>
+                <div class="lazy-load-scale delay-200">
                     <div class="text-4xl font-bold text-accent mb-2">30+</div>
                     <p class="text-neutral-200">Countries monitored</p>
                 </div>
-                <div>
+                <div class="lazy-load-scale delay-300">
                     <div class="text-4xl font-bold text-accent mb-2">60min</div>
                     <p class="text-neutral-200">Attack-to-alert timeframe</p>
                 </div>
             </div>
             
-            <a href="solutions.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition">
+            <a href="solutions.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition lazy-load-scale delay-400">
                 Explore Our Solutions
                 <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </div>
     </section>
 
-    <!-- Footer (Same standard footer) -->
+    <!-- Footer -->
     <footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
@@ -284,6 +285,7 @@
         </div>
     </footer>
 
+    <script src="../assets/js/lazy-load.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>

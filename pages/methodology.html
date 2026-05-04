@@ -6,6 +6,7 @@
     <meta name="description" content="GPRFO Methodology - 3-Layer Verification, 2-Source Rule, Data Collection Standards">
     <title>Methodology - GPRFO</title>
     <link rel="shortcut icon" href="../logo.jpeg" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -76,58 +77,42 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <!-- Replace the page header section with: -->
-<section class="pt-32 pb-16 relative bg-primary overflow-hidden">
-    <div class="absolute inset-0">
-        <img src="../assets/images/burning-church-night.jpg" 
-             alt="Church burning at night - Why GPRFO verification matters" 
-             class="w-full h-full object-cover opacity-20"
-             loading="lazy">
-    </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div data-aos="fade-up">
-            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Methodology</h1>
-            <p class="text-xl text-neutral-200">How we ensure accuracy, neutrality, and reliability.</p>
-        </div>
-    </div>
-</section>
-
-    <!-- Also add to the "3-Layer Verification" section, before the layers: -->
-    <div class="mb-12 rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
-        <div class="relative">
+    <!-- Page Header with burning church image -->
+    <section class="pt-32 pb-16 relative bg-primary overflow-hidden lazy-load-blur">
+        <div class="absolute inset-0">
             <img src="../assets/images/burning-church-night.jpg" 
-                alt="Documenting religious persecution - Each incident requires 3-layer verification" 
-                class="w-full h-64 object-cover"
+                alt="Church burning at night - Why GPRFO verification matters" 
+                class="w-full h-full object-cover opacity-20"
                 loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                <p class="text-white p-6 text-lg font-medium">
-                    Every verified incident helps prevent the next one.
-                </p>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Methodology</h1>
+                <p class="text-xl text-neutral-200">How we ensure accuracy, neutrality, and reliability.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Core Principles -->
+    <!-- Data Sources -->
     <section class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" class="lazy-load">
                 <h2 class="text-3xl font-heading font-bold text-primary mb-8">Data Sources</h2>
                 
                 <div class="grid md:grid-cols-3 gap-6 mb-16">
-                    <div class="bg-neutral-100 p-6 rounded-lg">
+                    <div class="bg-neutral-100 p-6 rounded-lg lazy-load-scale delay-100">
                         <i class="fas fa-user-friends text-3xl text-accent mb-4"></i>
                         <h3 class="text-xl font-semibold text-primary mb-2">Local Agents</h3>
                         <p class="text-neutral-700">200+ trained field agents in high-risk LGAs provide real-time ground truth verification.</p>
                     </div>
                     
-                    <div class="bg-neutral-100 p-6 rounded-lg">
+                    <div class="bg-neutral-100 p-6 rounded-lg lazy-load-scale delay-200">
                         <i class="fas fa-globe text-3xl text-accent mb-4"></i>
                         <h3 class="text-xl font-semibold text-primary mb-2">Open Sources</h3>
                         <p class="text-neutral-700">Media monitoring across 30+ countries in 15 languages using AI-assisted translation.</p>
                     </div>
                     
-                    <div class="bg-neutral-100 p-6 rounded-lg">
+                    <div class="bg-neutral-100 p-6 rounded-lg lazy-load-scale delay-300">
                         <i class="fas fa-handshake text-3xl text-accent mb-4"></i>
                         <h3 class="text-xl font-semibold text-primary mb-2">Institutional Partners</h3>
                         <p class="text-neutral-700">Faith networks, NGOs, and government agencies provide verified incident data.</p>
@@ -137,16 +122,33 @@
         </div>
     </section>
 
+    <!-- Burning Church Image Banner -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div class="rounded-lg overflow-hidden shadow-lg lazy-load-scale" data-aos="fade-up">
+            <div class="relative">
+                <img src="../assets/images/burning-church-night.jpg" 
+                    alt="Documenting religious persecution - Each incident requires 3-layer verification" 
+                    class="w-full h-64 object-cover"
+                    loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                    <p class="text-white p-6 text-lg font-medium">
+                        Every verified incident helps prevent the next one.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 3-Layer Verification -->
     <section class="py-20 bg-neutral-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4 text-center">GPRFO 3-Layer Verification Rule</h2>
-                <p class="text-lg text-neutral-700 text-center mb-16">Every incident passes through three rigorous verification layers before publication.</p>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4 text-center lazy-load">GPRFO 3-Layer Verification Rule</h2>
+                <p class="text-lg text-neutral-700 text-center mb-16 lazy-load delay-200">Every incident passes through three rigorous verification layers before publication.</p>
                 
                 <div class="space-y-8">
                     <!-- Layer 1 -->
-                    <div class="bg-white rounded-lg p-8 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-lg p-8 shadow-sm lazy-load-left delay-100" data-aos="fade-up">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-6">
                                 <span class="text-2xl font-bold text-accent">1</span>
@@ -179,7 +181,7 @@
                     </div>
                     
                     <!-- Layer 2 -->
-                    <div class="bg-white rounded-lg p-8 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-lg p-8 shadow-sm lazy-load-right delay-200" data-aos="fade-up">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 w-16 h-16 bg-accent rounded-full flex items-center justify-center mr-6">
                                 <span class="text-2xl font-bold text-white">2</span>
@@ -210,7 +212,7 @@
                     </div>
                     
                     <!-- Layer 3 -->
-                    <div class="bg-white rounded-lg p-8 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-lg p-8 shadow-sm lazy-load-left delay-300" data-aos="fade-up">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 w-16 h-16 bg-accent-dark rounded-full flex items-center justify-center mr-6">
                                 <span class="text-2xl font-bold text-white">3</span>
@@ -246,54 +248,11 @@
         </div>
     </section>
 
-    <!-- Definitions & Standards -->
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div data-aos="fade-up">
-                <h2 class="text-3xl font-heading font-bold text-primary mb-8">Definitions & Standards</h2>
-                
-                <div class="space-y-6">
-                    <div class="border border-neutral-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-primary mb-3">Religious Persecution</h3>
-                        <p class="text-neutral-700">Any attack, discrimination, or restriction targeting individuals or communities specifically because of their religious identity. We track attacks on all faiths equally.</p>
-                    </div>
-                    
-                    <div class="border border-neutral-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-primary mb-3">Insurgent Activity</h3>
-                        <p class="text-neutral-700">Organized violence by non-state actors against civilians or government targets within a defined territory. Distinguished from communal violence by organizational structure and political objectives.</p>
-                    </div>
-                    
-                    <div class="border border-neutral-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-primary mb-3">LGA/District Risk Levels</h3>
-                        <div class="space-y-3 mt-4">
-                            <div class="flex items-center">
-                                <span class="w-4 h-4 bg-red-600 rounded-full mr-3"></span>
-                                <span><strong>Extreme:</strong> Active killing, daily attacks</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="w-4 h-4 bg-orange-500 rounded-full mr-3"></span>
-                                <span><strong>High:</strong> Weekly attacks, known groups operating</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="w-4 h-4 bg-yellow-500 rounded-full mr-3"></span>
-                                <span><strong>Moderate:</strong> Monthly incidents, targeted communities</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="w-4 h-4 bg-green-500 rounded-full mr-3"></span>
-                                <span><strong>Low:</strong> Rare incidents, general stability</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Accuracy & Limitations -->
     <section class="py-20 bg-neutral-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12" data-aos="fade-up">
-                <div>
+                <div class="lazy-load-scale">
                     <h3 class="text-2xl font-heading font-bold text-primary mb-6">False Positive Rate</h3>
                     <div class="bg-white rounded-lg p-8 text-center">
                         <div class="text-6xl font-bold text-accent mb-2"><0.5%</div>
@@ -307,7 +266,7 @@
                     </div>
                 </div>
                 
-                <div>
+                <div class="lazy-load-scale delay-200">
                     <h3 class="text-2xl font-heading font-bold text-primary mb-6">Limitations</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start">
@@ -339,7 +298,7 @@
 
     <!-- Independence -->
     <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center lazy-load-blur">
             <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-8">
                 <i class="fas fa-balance-scale text-4xl text-accent"></i>
             </div>
@@ -359,11 +318,11 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-16 bg-primary">
+    <section class="py-16 bg-primary lazy-load-blur">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
             <h2 class="text-3xl font-heading font-bold text-white mb-4">Trust Through Transparency</h2>
             <p class="text-xl text-neutral-200 mb-8">Our methodology is public. Our data is verifiable. Our commitment is to accuracy.</p>
-            <a href="report-incident.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition">
+            <a href="report-incident.html" class="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-medium rounded-md hover:bg-accent-dark transition lazy-load-scale">
                 Submit Verified Data
                 <i class="fas fa-arrow-right ml-2"></i>
             </a>
@@ -413,6 +372,7 @@
         </div>
     </footer>
 
+    <script src="../assets/js/lazy-load.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>

@@ -93,3 +93,155 @@ html {
         background: white;
     }
 }
+/* Add to assets/css/styles.css */
+
+/* Lazy Loading Animations */
+.lazy-load {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-load.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different animation directions */
+.lazy-load-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-load-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.lazy-load-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-load-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale animation */
+.lazy-load-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-load-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Flip animation for cards */
+.lazy-load-flip {
+    opacity: 0;
+    transform: perspective(600px) rotateY(20deg);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-load-flip.revealed {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0);
+}
+
+/* Blur effect */
+.lazy-load-blur {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lazy-load-blur.revealed {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Delayed animations for staggered effects */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+.delay-800 { transition-delay: 800ms; }
+
+/* Image lazy loading with shimmer effect */
+.lazy-image {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.lazy-image.loaded {
+    background: none;
+    animation: none;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Loading skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-text {
+    height: 16px;
+    margin-bottom: 8px;
+}
+
+.skeleton-text:last-child {
+    width: 60%;
+}
+
+.skeleton-heading {
+    height: 24px;
+    width: 80%;
+    margin-bottom: 16px;
+}
+
+.skeleton-image {
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Progressive image loading */
+.progressive-image {
+    filter: blur(20px);
+    transition: filter 0.5s ease-in-out;
+}
+
+.progressive-image.loaded {
+    filter: blur(0);
+}
